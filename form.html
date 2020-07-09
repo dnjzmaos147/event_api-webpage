@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="./css/form.css" rel="stylesheet">
+</head>
+<body>
+
+    <p>제목 : <input type="text" name="id"></p>
+    <p>포스터이미지 : <input type="file"></p>
+    <p>장르 : 
+    <input type="radio" name="chk_info1"value="뮤지컬">뮤지컬
+    <input type="radio" name="chk_info2"value="콘서트">콘서트
+    <input type="radio" name="chk_info3"value="연극">연극
+    <input type="radio" name="chk_info4"value="무용">무용
+    <input type="radio" name="chk_info5"value="클레식">클레식
+    <input type="radio" name="chk_info6"value="전시/행사">전시/행사</p>
+    <p>기간 :  <input type = "date" min = "2020-01-01" max = "2033-03-03" name = "date" step = "1"> ~<input type = "date" min = "2020-01-01" max = "2033-03-03" name = "date" step = "1">      
+    <p>시간 : <input type="text" name="time"></p>
+    <p>문의전화 : <input type="text" name="phone"></p>
+    <p>주최기관 : <input type="text" name="agency"></p>
+    <p>공연장 : <input type="text" name="where"></p>
+    <p>지역(상세주소) : 
+    <select name = "city1">
+        <optgroup label = "서울">
+            <option value = "songpa-gu">송파구</option>
+            <option value = "gangnam-gu">강남구</option>
+            <option value = "seocho-gu">서초구</option>
+            <option value = "junggu-gu">중구</option>
+        </optgroup>
+
+         <optgroup label = "경기도">
+            <option value = "seongnam-si">성남시</option>
+            <option value = "suwon-si">수원시</option>
+            <option value = "yongin-si">용인시</option>
+            <option value = "anyang-si">안양시</option>
+        </optgroup>         
+    </select>
+    <input type="text" name="where2"></p>
+    <p>관련 홈페이지 : <input type="text" name="site">@
+    <select name = "site">
+        <optgroup label = "site">
+            <option value = "naver">naver.com</option>
+            <option value = "daum">daum.net</option>
+            <option value = "google">google.com</option>
+        </optgroup></p>
+
+    <input type="submit">
+    
+</form>
+</body>
+</html>

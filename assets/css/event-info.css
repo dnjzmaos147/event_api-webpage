@@ -1,0 +1,113 @@
+.addthis_inline_share_toolbox{
+    margin-top: 30px;
+}
+.info-wrap {
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.pc-header img{
+    width: 500px;
+    height: 500px;
+}
+.pc-header p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.table{
+    table-layout:fixed;
+    word-break:break-all;
+}
+.type-cell{
+    width: 120px;
+}
+.table td{
+   text-align: center;
+}
+.image-cell{
+    padding: 0;
+    margin: 0;
+    width: 500px;
+    height: 500px;
+}
+.table img{
+    width: 500px;
+    height: 500px;
+}
+.table a{
+    color: dimgray;
+}
+.table a:hover{
+    color: black;
+}
+.mapicon img{
+    width: 35px;
+    height: 35px;
+}
+/* 최소 560px, 560보다 클때 */
+@media screen and (min-width: 560px) {
+    .mobile-info{
+        display: none;
+    }
+    
+}
+
+/* 최대 560px, 560보다 작을때 */
+@media screen and (max-width: 560px) {
+    .mobileHeader{
+        text-align: center;
+    }
+    .mobileHeader p{
+        margin-top: 20px;
+        font-size: larger;
+        font-weight: bold;
+    }
+    .pc-info{
+        display: none;
+    }
+    .back-image img{
+        width: 100%;
+        height: 260px;
+        -webkit-filter:blur(8px);
+        -moz-filter:blur(8px);
+        -o-filter:blur(8px);
+        -ms-filter:blur(8px);
+         filter:blur(8px);
+         z-index: -1;
+    }
+    .front-image img{
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        z-index: 1;
+        left: 15%;
+    }
+    .table{
+        width: 100%;
+        table-layout:fixed; word-break:break-all;
+    }
+    .table th{
+        width: 20%;
+    }
+    .table td{
+        width: 70%;
+       text-align: center;
+    }
+    .table img{
+        width: 500px;
+        height: 500px;
+    }
+    .table a{
+        color: dimgray;
+    }
+    .table a:hover{
+        color: black;
+    }
+    .mapicon img{
+        width: 35px;
+        height: 35px;
+    }
+
+
+}

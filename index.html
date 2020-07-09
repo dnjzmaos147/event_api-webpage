@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>공연행사정보</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- CSS here -->
+    <link href="./assets/css/api.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/ticker-style.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/date-table.css">
+    
+    <!-- 데이트피커 css -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+        integrity="sha256-siyOpF/pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg=" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <header>
+        <!-- 사이드바 -->
+        <div id="mySidenav" class="sidenav">
+            <a href="#">최근 본 공연정보</a>
+            <div class="sidenav-info"></div>
+        </div>
+        <div id="open">
+            <span class="openbtn" style="cursor:pointer; " onclick="openNav()">
+                <img width="20px" height="40px" src="./assets/img/openbutton.png"alt="">
+            </span>
+            <span style="display: none;" class="closebtn" style="cursor:pointer; " onclick="closeNav()">
+                <img width="20px" height="40px" src="./assets/img/closebutton.png"alt="">
+            </span>
+        </div>
+        <!-- 사이드바 -->
+
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+
+                <div class="header-mid gray-bg">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+
+                            <div class="input-group mb-3">
+                                <!-- Logo -->
+                                <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
+                                    <div class="logo">
+                                        <a href="index.html"><img width="136px" height="55px"
+                                                src="assets/img/logo/logo.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <!-- Logo -->
+                                <input value="" name="search" id="search" type="text" class="form-control"
+                                    placeholder="검색어를 입력해 주세요." aria-label="Recipient's username"
+                                    style="margin-top: 12px;">
+                                <div class="input-group-append" style="height: 38px; margin-top: 12px;">
+                                    <button id="search-button" name="search-button" class="input-group-text"><i
+                                            class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
+                                <!-- sticky -->
+                                <div class="sticky-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                                <!-- Main-menu -->
+                                <div class="main-menu d-none d-md-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="./event_type.html?eventType= ">전체</a>
+                                            </li>
+                                            <li><a href="./event_type.html?eventType=공연">공연</a>
+                                            </li>
+                                            <li><a href="./event_type.html?eventType=문화">문화</a>
+                                            </li>
+                                            <li><a href="./event_type.html?eventType=이벤트">이벤트</a>
+                                            </li>
+                                            <li><a href="./event_type.html?eventType=유아단체">유아단체</a>
+                                            </li>
+                                            <li><a href="./event_type.html?eventType=청소년">청소년</a>
+                                            </li>
+                                            <li><a href="./event_type.html?eventType=교육">교육</a></li>
+                                            <li><a href="./event_type.html?eventType=세미나">세미나</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <div class="header-right f-right d-none d-lg-block">
+
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-md-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!-- Trending Area Start -->
+        <div class="trending-area fix pt-25 gray-bg">
+            <div class="container">
+                <div class="trending-main">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <!-- Trending Top -->
+                            <div class="slider-active">
+                                <!-- Single -->
+                                <div class="single-slider">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img">
+                                            <img width="770px" height="662px"
+                                                src="http://www.ggcf.kr/wp-content/uploads/2017/10/poster_685_2.jpg"
+                                                alt="">
+                                            <div class="trend-top-cap">
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
+                                                    data-duration="1000ms">공연</span>
+                                                <h2><a href="https://www.ggcf.kr/archives/event/traditional-korean-music" data-animation="fadeInUp"
+                                                        data-delay=".4s" data-duration="1000ms">국악이 바람난 날 - 광교호수공원</a>
+                                                </h2>
+                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">
+                                                    행사기간 : 2017-10-21 ~ 2017-10-21</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single -->
+                                <div class="single-slider">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img">
+                                            <img width="770px" height="662px"
+                                                src="http://www.ggcf.kr/wp-content/uploads/2019/05/5%EC%9B%94-%ED%8F%AC%EB%A0%88%ED%8F%AC%EC%8A%A4%ED%84%B0_%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%95%EC%86%8C.jpg"
+                                                alt="">
+                                            <div class="trend-top-cap">
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
+                                                    data-duration="1000ms">공연/행사</span>
+                                                <h2><a href="https://www.ggcf.kr/archives/event/foret-foret-5" data-animation="fadeInUp"
+                                                        data-delay=".4s" data-duration="1000ms">숲속 모두의 포레포레 -
+                                                        경기상상캠퍼스</a></h2>
+                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">5월
+                                                    25일, 26일 12시~20시</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single -->
+                                <div class="single-slider">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img">
+                                            <img width="770px" height="662px"
+                                                src="http://gcm.ggcf.kr/wp-content/uploads/sites/4/2020/02/%EB%91%90%EB%93%A4%ED%8C%9D-%ED%8F%AC%EC%8A%A4%ED%84%B0-%EA%B2%BD%EA%B8%B0%EB%8F%84%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%B0%95%EB%AC%BC%EA%B4%80_235.jpg"
+                                                alt="">
+                                            <div class="trend-top-cap">
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
+                                                    data-duration="1000ms">공연</span>
+                                                <h2><a href="latest_news.html" data-animation="fadeInUp"
+                                                        data-delay=".4s" data-duration="1000ms">낙서들이 살아 움직이는 마법! 두들팝 -
+                                                        경기어린이박물관2층</a></h2>
+                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">
+                                                    행사기간 : 2020-04-01 ~ 2020-05-31</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right content -->
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img">
+                                            <img width="370px" height="397px"
+                                                src="http://njp.ggcf.kr/wp-content/uploads/sites/5/2012/08/museum-night-festival_main1.jpg"
+                                                alt="">
+                                            <div class="trend-top-cap trend-top-cap2">
+                                                <span class="bgb">클래식</span>
+                                                <h2><a href="latest_news.html">뮤지엄 나잇 페스티벌</a></h2>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img">
+                                            <img width="370px" height="230px"
+                                                src="http://musenet.ggcf.kr/wp-content/uploads/sites/2/2019/05/%ED%99%8D%EB%B3%B4%ED%8F%AC%EC%8A%A4%ED%84%B0_%EC%B5%9C%EC%A2%85.png"
+                                                alt="">
+                                            <div class="trend-top-cap trend-top-cap2">
+                                                <span class="bgg">이벤트</span>
+                                                <h2><a href="http://gcm.ggcf.kr/?post_type=event&p=23453">SNS 추억 공유 이벤트 </a></h2>
+                                                <p>-경기도 어린이 박물관-</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 행사기간 조회 -->
+            <div id="pc-date">
+                <table class="type09">
+                    <thead>
+                        <tr>
+                            <th scope="cols">시작날짜</th>
+                            <th scope="cols">
+                                <span class="input-group date">
+                                    <input type="text" id="start-date" class="form-control" placeholder="시작기간을 입력하세요.">
+                                </span>
+                            </th>
+                            <th scope="cols">&nbsp;&nbsp;&nbsp;</th>
+                            <th scope="cols">종료날짜</th>
+                            <th scope="cols">
+                                <span class="input-group date">
+                                    <input type="text" id="end-date" class="form-control" placeholder="종료기간을 입력하세요.">
+                                </span>
+                            </th>
+                            <th scope="cols"><span class="date-search" style="cursor:pointer; ">조회하기</span></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- 행사기간 조회 -->
+            <!-- 행사기간조회 - 모바일 -->
+            <div id="mobile-date">
+                <table class="type09">
+                    <thead>
+                        <tr>
+                            <th colspan="2" scope="cols">
+                                관람기간 조회
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td scope="cols">
+                            <span class="input-group date">
+                                <input type="text" id="start-date-m" class="form-control" placeholder="시작기간을 입력하세요.">
+                            </span>
+                        </td>
+                        <td class="date-btn" rowspan="2"><span class="date-search-m">조회</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="cols">
+                            <span class="input-group date">
+                                <input type="text" id="end-date-m" class="form-control" placeholder="종료기간을 입력하세요.">
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 행사기간조회 - 모바일 -->
+            <div class="re">
+                <div style="width: 80%; margin: auto;" class="event-api">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- footer-bottom aera -->
+        <div class="footer-bottom-area footer-bg">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p>
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    경기문화포털 공연정보</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- JS here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/event_api.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <!-- contact js -->
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+
+
+
+    <!-- 제이쿼리 1.8.3 -->
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+    <!-- 데이트피커 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+        integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script>
+    <script>
+        // 데이트피커 세팅
+        $(function () {
+            $('.input-group.date').datepicker({
+                calendarWeeks: false,
+                todayHighlight: true,
+                autoclose: true,
+                format: "yyyy/mm/dd",
+                language: "kr"
+            });
+        });
+    </script>
+    <script>
+        // 데이트피커 한글
+        ; (function ($) {
+            $.fn.datepicker.dates['kr'] = {
+                days: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"],
+                daysShort: ["일", "월", "화", "수", "목", "금", "토", "일"],
+                daysMin: ["일", "월", "화", "수", "목", "금", "토", "일"],
+                months: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                monthsShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+            };
+        }(jQuery));
+    </script>
+    <script src="./assets/js/date-table.js"></script>
+    <script src="./assets/js/wingbanner.js"></script>
+</body>
+
+</html>
